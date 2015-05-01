@@ -6,6 +6,9 @@ ruby '2.2.1'
 
 gem 'bootstrap-sass'
 
+gem 'pry-rails', :group => :development
+
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
