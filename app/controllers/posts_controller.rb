@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  before_action :flash_attack, :except => [:index, :new]
+  
   def index
   	@posts = Post.all
   end
@@ -35,5 +38,9 @@ class PostsController < ApplicationController
        flash[:error] = "There was an error saving the post. Please try again."
        render :edit
      end
+   end
+   
+      def flash_attack
+    flash.now[:notice] = "OH Yeah!!"
    end
 end
