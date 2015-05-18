@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index
-     @topics = Topic.all
+     @topics = Topic.paginate(page: params[:page], per_page: 10)
      authorize @topics
   end
 
@@ -9,8 +9,10 @@ class TopicsController < ApplicationController
      authorize @topic
   end
 
-  def show
+  def show # shows one topic in topics/show.html.erb
+    
      @topic = Topic.find(params[:id])
+     #@topics = Topic.paginate(page: params[:page], per_page: 10)
      @posts = @topic.posts
      authorize @topic
   end
