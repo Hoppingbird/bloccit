@@ -7,7 +7,7 @@
        submitted <%= time_ago_in_words(@post.created_at) %> ago by
        <%= @post.user.name %>
        <div>
-        <% image_tag(@post.image.small.url) if @post.image? %>
+        <%= image_tag(@post.image.small.url) if @post.image? %>
        </div>
      </small>
     <p><%= markdown_to_html @post.body %></p>
