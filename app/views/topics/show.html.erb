@@ -18,6 +18,10 @@
              submitted <%= time_ago_in_words(post.created_at) %> ago by
              <%= post.user.name %><br>
              <%= post.comments.count %> Comments
+
+           <div>
+             <%= image_tag(@post.image.small.url) if @post.image? %>
+           </div>
            </small>
          </div>
        </div>
