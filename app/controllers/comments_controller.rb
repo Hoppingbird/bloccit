@@ -1,11 +1,12 @@
 class CommentsController < ApplicationController
   def create
-  	@topic = Topic.find(params[:topic_id])
-    @post = @topic.posts.find(params[:post_id])
+    ## commnet added to save destroy assignment branch delete this
+    @post = Post.find(params[:post_id])
+    @topic = @post.topic
   	@comment = @post.comments.new(comment_params)
   	@comment.user = current_user
-  	authorize @comment
 
+  	authorize @comment
   	if @comment.save
       flash[:notice] = "Comment was saved."
       redirect_to [@topic, @post]
@@ -16,8 +17,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @topic = Topic.find(params[:topic_id])
-    @post = @topic.posts.find(params[:post_id])
+    @post = Post.find(params[:post_id])
+    @topic = @post.topic
     @comment = @post.comments.find(params[:id])
 
     authorize @comment
