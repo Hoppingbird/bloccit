@@ -1,0 +1,12 @@
+
+
+<%= div_for comment do %>
+
+      <% if comment.user  %>
+          <p1><h4><%= "#{comment.user.name} said:" %></h4></p1>
+            <h5><em><%= " #{comment.body}" %></em></h5>
+      <% end %>
+
+
+
+<% end %>
