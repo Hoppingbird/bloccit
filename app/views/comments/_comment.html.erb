@@ -1,12 +1,17 @@
 
 
-<%= div_for comment do %>
-
-      <% if comment.user  %>
-          <p1><h4><%= "#{comment.user.name} said:" %></h4></p1>
-            <h5><em><%= " #{comment.body}" %></em></h5>
+<div class="media">
+  <div class="media-left">
+    <%= image_tag(comment.user.avatar.small.url, class: "media-object") if comment.user.avatar? %>
+  </div>
+  <div class="media-body">
+    <small>
+      <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
+      <% if policy(comment).destroy? %>
+          | <%= link_to "Delete", [@topic, @post, comment], method: :delete %>
       <% end %>
+    </small>
+    <p><%= comment.body %></p>
+  </div>
+</div>
 
-
-
-<% end %>
