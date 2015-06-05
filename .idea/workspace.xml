@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f150a2e8-2463-4c9b-9733-74482855fa23" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.rspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150604003935_create_votes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150605050306_add_rank_to_posts.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/votes/_voter.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/vote.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/policies/vote_policy.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/vote_spec.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/votes_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
