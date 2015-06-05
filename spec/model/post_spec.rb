@@ -4,9 +4,10 @@ describe Post do
   describe "vote methods" do
 
     before do
-      @post = Post.create(title: 'post title', body: 'post')
-      3.times { @post.vote.create(value: 1)}
-      2.times { @post.vote.create(value: -1)}
+      #@post = Post.create(title: 'post title', body: 'post')
+      @post = Post.create(title: 'Post title', body: 'Post bodies must be pretty long.')
+      3.times { @post.votes.create(value: 1)}
+      2.times { @post.votes.create(value: -1)}
     end
 
     describe '#up_votes' do
@@ -17,15 +18,7 @@ describe Post do
 
     describe '#down_votes' do
       it "counts the number votes with values = -1" do
-        describe Vote do
-          describe "validations" do
-            describe "value validation" do
-              it "only allows -1 or 1 as values" do
-                # your expectations here
-              end
-            end
-          end
-        end
+        expect( @post.down_votes ).to eq(2)
       end
     end
 
