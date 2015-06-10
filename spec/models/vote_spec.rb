@@ -1,11 +1,10 @@
 require 'rails_helper'
 
+include TestFactories
+
 describe Vote do
 
     describe "value validation" do
-
-      include TestFactories
-
       it "only allows -1 or 1 as values" do
         up_vote = Vote.new(value: 1)
         expect( up_vote.valid? ).to eq(true)
