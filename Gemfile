@@ -44,6 +44,7 @@ gem 'rails', '4.2.1'
    gem 'binding_of_caller'
    gem 'better_errors'
    gem 'rspec-rails', '~> 3.0'
+   gem 'capybara'
    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
    gem 'byebug'
 
