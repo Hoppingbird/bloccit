@@ -10,21 +10,25 @@ gem 'pry-rails', :group => :development
 
 gem 'faker'
 
- gem 'devise'
+gem 'devise'
  
- gem 'figaro','1.0'
+gem 'figaro','1.0'
  
- gem 'pundit'
+gem 'pundit'
 
- gem 'redcarpet'
+gem 'redcarpet'
 
- gem 'carrierwave'
+gem 'carrierwave'
  
- gem 'mini_magick'
+gem 'mini_magick'
 
- gem 'fog'
+gem 'fog'
 
- gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate', '~> 3.0.5'
+
+gem 'factory_girl_rails', '~> 4.0'
+
+
 
 
 
